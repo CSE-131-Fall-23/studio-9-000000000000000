@@ -1,16 +1,22 @@
 package studio9;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Polynomial {
 	
 	private LinkedList<Double> list;
-
+	private static ArrayList<Integer> poly;
+	private double coeff;
+	private int n = list.size();
 	/**
 	 * Constructs a Polynomial with no terms yet.
 	 */
 	public Polynomial() {
-		//FIXME
+		this.list = list;
+		this.coeff = coeff;
+		
 	}
 
 	
@@ -19,9 +25,16 @@ public class Polynomial {
 	 * @param coeff
 	 * @return polynomial with added term
 	 */
-	public void addTerm(double coeff) {
-		//FIXME
+	public LinkedList<Double> addTerm(double coeff) {
+		list.add(coeff);
+		String x = "";
+		while (n > 0)  {
+			x = x + coeff + "x^" + n + "+";
+			n = n - 1;
 	}
+		return list;
+		}
+		
 	
 	/*
 	 * Returns a String of the polynomial with the proper form:
@@ -29,7 +42,8 @@ public class Polynomial {
 	 * Cx^N + Cx^N-1 + ... + Cx + C
 	 */
 	public String toString() {
-		return ""; //FIXME
+		
+			return "";
 	}
 	
 	/**
